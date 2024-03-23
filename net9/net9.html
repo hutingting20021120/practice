@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>我们对 .NET 9 的愿景</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #eaf7e3; /* 浅绿色 */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .author {
+    color: #878383;
+    font-size: 11px;
+    line-height: 1.6;
+    
+  }
+
+  h1 {
+    color: #2d882d; /* 深绿色 */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    color: #2d882d; /*深绿色*/
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-style:solid;
+    border-width: 0px 0px 0px 4px;
+    border-left-color: #a6eaa6; /*中绿色*/
+    padding-left: 6px;
+  }
+
+  p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  section {
+    font-size: 11px;
+    color: #878383;
+    margin-bottom: 10px;
+  }
+
+  footer {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  span {
+    color: #2d882d;
+  }
+
+  a {
+    color: #878383;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #005580;
+  }
+
+  .emoji::after {
+    content: "\1F60A";
+    margin-left: 5px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>我们对 .NET 9 的愿景</h1>
+    <p class="author">作者：.NET 团队<br>
+      排版：Hu Tingting<br>
+      原文链接：<a href="https://mp.weixin.qq.com/s/9WnMm57E9KO2WzNkbdOQmA">https://mp.weixin.qq.com/s/9WnMm57E9KO2WzNkbdOQmA</a></p>
+    <p>欢迎来到 .NET 9！继几个月前成功发布 .NET 8 之后，我们又进入了一个新年度发布周期。我们建议开发人员将他们的应用程序迁移到 .NET 8。在这篇文章中，我们将分享我们对 .NET 9 的初步设想，它将于年底在 .NET Conf 2024 上发布。我们最关注的领域是云原生和智能应用程序开发。您可以期待我们在提升性能、生产力和安全性以及整个平台的改进方面进行的巨大投入。</p>
+    <p>今天，让我们来看看我们计划与 Microsoft 合作伙伴团队合作交付的 .NET 9 重点领域和补充集成。我们的目标是提高使用 Visual Studio 及带有 C# 开发工具包的 Visual Studio Code 时的 .NET 开发效率，并且在使用 Azure 服务时，可以更轻松地进行云部署。我们将继续与 Canonical 和 Red Hat 等行业合作伙伴密切合作，以确保 .NET 在您使用的任何地方都能正常工作。</p>
+    <p>.NET 9 正在成为该平台向前迈出的又一大步。我们今天发布 <span>.NET 9 Preview 1</span>，欢迎您对<span>我们发布的所有新功能</span>提供反馈。</p>
+    <section><strong>.NET 9 Preview 1</strong><br><a href="https://github.com/dotnet/core/discussions/9167">https://github.com/dotnet/core/discussions/9167</a></section>
+    <section><strong>我们发布的所有新功能</strong><br><a href="https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-9/overview">https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-9/overview</a></section>
+  
+    <h2>面向云原生开发者的平台</h2>
+      <p>在过去的几年里，我们一直在努力构建<span>强大的云原生基础</span>，例如<span>运行时性能</span>和<span>应用程序监控</span>。我们将继续这一努力。我们还将重点转向为当前流行的生产基础设施和服务铺平道路，例如在 Kubernetes 中运行并使用托管数据库和 Redis 等缓存服务。我们将在 .NET 堆栈的多个层提供这些改进。这些功能全部与<span> .NET Aspire </span>结合在一起，这大大降低了构建云应用程序的成本和复杂性以及缩短了开发和生产之间的距离。</p>
+      <p>我们一直在开发 Native AOT 和应用程序修剪，作为优化生产应用程序的关键工具。在 .NET 8 中，我们针对<span>修剪</span>和 AOT 优化了 Web API 应用程序（使用 webapiot 模板）。在 .NET 9 中，我们正在努力对其他应用程序类型执行相同的操作，并改进所有 ASP.NET Core 应用程序的<span> DATAS GC</span>。</p>
+      <p>我们的 Azure 容器应用程序合作伙伴将确保 .NET 9 应用程序可以在基于 Kubernetes 的环境中轻松扩展到多个实例。我们正与他们通力合作，确保使用<span>数据保护</span>对临时数据（例如防伪和身份验证令牌）进行正确加密，并改进速率限制 API，以确保每个节点和每个节点之间的最佳行为。</p>
+      <p>去年在 .NET Conf 上展示的<span> eShop </span>参考架构示例应用程序将随着 .NET 9 在这一年的发展而进行更新，以利用这些新功能和部署选项。</p>
+      <section><strong>强大的云原生基础</strong><br><a href="https://devblogs.microsoft.com/dotnet/category/containers/">https://devblogs.microsoft.com/dotnet/category/containers/</a></section>
+      <section><strong>运行时性能</strong><br><a href="https://devblogs.microsoft.com/dotnet/category/performance/">https://devblogs.microsoft.com/dotnet/category/performance/</a></section>
+      <section><strong>应用程序监控</strong><br><a href="https://learn.microsoft.com/en-us/dotnet/core/diagnostics/">https://learn.microsoft.com/en-us/dotnet/core/diagnostics/</a></section>
+      <section><strong>.NET Aspire</strong><br><a href="https://devblogs.microsoft.com/dotnet/category/dotnet-aspire/">https://devblogs.microsoft.com/dotnet/category/dotnet-aspire/</a></section>
+      <section><strong>修建</strong><br><a href="https://devblogs.microsoft.com/dotnet/creating-aot-compatible-libraries/">https://devblogs.microsoft.com/dotnet/creating-aot-compatible-libraries/</a></section>
+
+    <h2>面向云原生开发人员的工具</h2>
+      <p>我们的 Visual Studio 合作伙伴计划进行改进，以支持和增强我们的云平台、Native AOT、.NET Aspire 和 Azure 部署。</p>
+      <p>Native AOT 代码编译需要安装和使用许多 .NET 开发人员不常用的工具。正如我们的<span>文档</span>和<span>示例</span>所演示的，开发人员如果想要交叉编译（例如，在 Windows 上以 Linux 为目标），那他们将非常依赖 Docker 和/或 WSL2。Visual Studio 对 AOT 的支持将得到扩展，以使更多开发人员可以使用 Native AOT。</p>
+      <p>Visual Studio 和 Visual Studio Code 将为 .NET Aspire 提供新的开发和部署体验。这将包括配置组件、调试（包括热重载）AppHost 和子进程，以及与开发人员仪表板完全集成。开发人员将能够通过 Visual Studio、Visual Studio Code 和 Azure Developer CLI（azd）将其项目部署到 Azure 容器应用。</p>
+      <section><strong>文档</strong><br><a href="https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/cross-compile">https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/cross-compile</a></section>
+      <section><strong>示例</strong><br><a href="https://github.com/dotnet/dotnet-docker/blob/main/samples/releasesapi/README.md">https://github.com/dotnet/dotnet-docker/blob/main/samples/releasesapi/README.md</a></section>
+
+    <h2>.NET 和人工智能</h2>
+      <p>OpenAI 为开发者提供了用人工智能改造他们的应用程序的机会，这让他们感到兴奋。在过去的一年里，Azure Open AI 和 .NET 已被用来创建 AI 解决方案，其中 Microsoft Copilot 最受欢迎。我们将继续与客户合作，寻找使用 C# 来构建此类新型应用程序的方法，并快速投资于我们的 AI 平台。</p>
+      <p>在 .NET 8 中，我们将投资扩展到了 ML.NET 之外。我们专注于 AI 工作负载，投资于<span>入门示例和文档</span>，并与 AI 生态系统合作伙伴合作，为<span>Qdrant</span>和<span>Milvus</span> 等矢量数据库以及 Semantic Kernel 等库提供 C# 客户端。此外，我们还为 .NET 添加了<span>TensorPrimitives</span> 。</p>
+      <p>展望 .NET 9，我们致力于让 .NET 开发人员更轻松地将人工智能集成到他们现有的和新的应用程序中。开发人员将找到用于使用 OpenAI 和 OSS 模型（托管和本地）的优秀库和文档，我们将继续在 Semantic Kernel、OpenAI 和 Azure SDK 方面进行合作，以确保 .NET 开发人员拥有构建智能应用程序的一流体验。</p>
+      <p>我们将在整个版本发布期间在 GitHub 上更新<span> ChatGPT + 企业数据使用 Azure OpenAI 和 Cognitive Search .NET 的示例</span>。</p>
+      <section><strong>入门示例和文档</strong><br><a href="https://learn.microsoft.com/en-us/collections/d2z1bmomeo55kr?source=learn">https://learn.microsoft.com/en-us/collections/d2z1bmomeo55kr?source=learn</a></section>
+      <section><strong>Qdrant</strong><br><a href="https://github.com/qdrant/qdrant-dotnet">https://github.com/qdrant/qdrant-dotnet</a></section>
+      <section><strong>Milvus</strong><br><a href="https://milvus.io/docs/v2.2.x/install-csharp.md">https://milvus.io/docs/v2.2.x/install-csharp.md</a></section>
+      <section><strong>TensorPrimitives</strong><br><a href="https://github.com/dotnet/runtime/issues/92219">https://github.com/dotnet/runtime/issues/92219</a></section>
+      <section><strong>ChatGPT + 企业数据使用 Azure OpenAI 和 Cognitive Search .NET 的示例</strong><br><a href="https://github.com/Azure-Samples/azure-search-openai-demo-csharp">https://github.com/Azure-Samples/azure-search-openai-demo-csharp</a></section>
+
+    <h2>尝试 .NET 9 Preview 1</h2>
+      <p><span>.NET 9 Preview 1</span> 现已可供下载。展望未来，我们将在 GitHub <span>讨论区发布预览版本</span>。我们将调整 .NET 博客内容以突出 .NET 8 的优势，旨在支持您在生产环境中使用 .NET 8。</p>
+      <p><span>.NET Aspire Preview 3</span> 也于今天发布。此版本包括对仪表板的 UI 改进以及对 Azure OpenAI、Kafka.Oracle、MySQL、CosmosDB 和 Orleans 等新组件的支持。</p>
+      <p>如果您不喜欢预览版，请查看 <span>.NET 8 发布文章</span>。我们已经听到了很多关于早期 .NET 8 部署的良好反馈。.NET 9 应该可以非常轻松地从 .NET 8（和以前的版本）迁移。</p>
+      <section><strong>.NET 9 Preview 1</strong><br><a href="https://github.com/dotnet/core/discussions/9167">https://github.com/dotnet/core/discussions/9167</a></section>
+      <section><strong>讨论区发布预览版本</strong><br><a href="https://github.com/dotnet/core/discussions/9131">https://github.com/dotnet/core/discussions/9131</a></section>
+      <section><strong>.NET Aspire Preview 3</strong><br><a href="https://github.com/dotnet/aspire/discussions/2205">https://github.com/dotnet/aspire/discussions/2205</a></section>
+      <section><strong>.NET 8 发布文章</strong><br><a href="https://devblogs.microsoft.com/dotnet/announcing-dotnet-8/">https://devblogs.microsoft.com/dotnet/announcing-dotnet-8/</a></section>
+
+    <h2>致谢</h2>
+      <p>.NET 之所以令人惊叹，是因为 .NET 社区中的你们帮助推动了 .NET 的发展。感谢每一位贡献者在我们推动每个版本精彩进展中给予帮助，无论是通过提出问题、发表评论、贡献代码、创建包、参与直播，还是在线上或本地社区活跃。在<span> .NET 9 </span>发行说明中，您将会看到社区成员在每个版本中的重要贡献。</p>
+      <section><strong>.NET 9 发行说明</strong><br><a href="https://github.com/dotnet/core/tree/main/release-notes/9.0">https://github.com/dotnet/core/tree/main/release-notes/9.0</a></section>
+
+
+  <footer style="text-align: center;"><img src="./footer1.jpg" alt="" width="150px">
+    <p class="emoji">Good luck! </p>
+  </footer>
+</div>
+
+</body>
+</html>
+
+

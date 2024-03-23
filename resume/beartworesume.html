@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>熊二简历</title>
+<style type="text/css">
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border: 6px solid #e7b338;
+        border-radius: 10px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .profile-info {
+        flex: 1;
+    }
+
+    h1, h2, h3 {
+        color: #e7b338;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    ul, li{
+        list-style-type: none;
+    }
+
+    a {
+        color: #e7b338;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #ffa500;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    .achievement-list li {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .achievement-list li::before {
+        content: '🌟';
+        position: absolute;
+        left: 0;
+    }
+
+    .achievement-list a {
+        color: #008080;
+    }
+
+    .achievement-list a:hover {
+        color: #ff6347;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="profile-info">
+            <h1>熊二</h1>
+            <p>生日：1999.6.2</p>
+            <p>电话：123-456-7890</p>
+            <p>Email：<a href="mailto:bear_two@example.com">bear_two@example.com</a></p>
+        </div>
+        <div class="profile-image">
+            <img src="./image/1.jpg" alt="bear two">
+        </div>
+    </header>
+    
+    <section>
+        <h2>求职宣言</h2>
+        <p>俺的蜂蜜 俺的坚果 俺的小蝴蝶~</p>
+    </section>
+    
+    <section>
+        <h2>教育经历</h2>
+        <table>
+            <tr>
+                <th>时间</th>
+                <th>学校</th>
+                <th>专业</th>
+            </tr>
+            <tr>
+                <td>2010-2014</td>
+                <td>狗熊岭幼儿园</td>
+                <td><abbr title="捅马蜂窝取蜂蜜">食品加工</abbr></td>
+            </tr>
+            <tr>
+                <td>2014-2016</td>
+                <td>狗熊岭小学</td>
+                <td><abbr title="在光头强砍树时捣乱">环境保护</abbr></td>
+            </tr>
+        </table>
+    </section>
+    
+    <section>
+        <h2>技能</h2>
+        <ul>
+            <li>爬树</li>
+            <li>赶走光头强</li>
+            <li>摘马蜂窝</li>
+            <li>冬眠</li>
+            <li>追小蝴蝶</li>
+            <li>捍卫森林和平</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>主要成就</h2>
+        <ul class="achievement-list">
+            <li>捍卫森林，阻止<a href="./image/guang.jpg" target="_blank">光头强</a>砍树阴谋</li>
+            <li>光头强困难时不计前嫌帮助光头强。</li>
+            <li>关<a href="./image/li.jpg" target="_blank">李老板</a>禁闭</li>
+            <li>在电影里和光头强打败<a href="./image/daer.jpg" target="_blank">大马猴，二狗，</a>和老板。</li>
+        </ul>
+    </section>
+
+    <a href="https://www.bilibili.com/bangumi/play/ss47144?spm_id_from=333.337.0.0" 
+    title="点击观摩熊风"target="_blank" rel="noopener noreferrer">
+        <img style="position: absolute; top: 920px;left: 888px;max-width: 100%;max-height: 100px;" 
+        src="./image/2.png" ></a>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color:#323232;
+}
+
+header, footer {
+    background-color: #6510AD;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 120px;
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.up {
+    margin-bottom: 10px;
+}
+
+.up::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.down {
+    margin-bottom: 10px;
+}
+
+.down::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.up_left, .up_right, .down_left, .down_right {
+    padding: 10px;
+    position: relative;
+    float: left;
+}
+
+.up_left, .up_right {
+    width: 500px;
+}
+
+.down_left {
+    width: 750px;
+}
+
+.down_right {
+    width: 250px;
+    padding-top: 40px;
+}
+
+.down_right::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+.title{
+    height: 30px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+ul{
+    font-size: 16px;
+    line-height: 30px;
+    border-top: 2px solid #090a6e;
+    border-bottom: 1px solid #CECECE;
+    border-left: 1px solid #CECECE;
+    border-right: 1px solid #CECECE;
+    padding: 10px;
+}
+
+.li_info{
+    width: calc(100% - 52px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.date{
+    width: 52px;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 30px;
+    position: absolute;
+    right: 20px;
+}
+
+.depart{
+    width: 100px;
+    display: inline-block;
+    font-size: 16px;
+    left: 20px;
+    color: #6510AD;
+}
+
+.icon_table{
+    text-align:center;
+    float: left;
+    border: 1px solid #CECECE;
+    width: 115px;
+    height: 115px;
+    line-height: 115px;
+    list-style: none;
+}
+
+.icon_calendar{
+    background-image: url(./image/icon-calendar.png);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center 25px;
+}
+
+.icon_zbrj{
+    background-image: url(./image/icon-software.png);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center 25px;
+    border-left: none;
+}
+
+.icon_wfcz{
+    background-image: url(./image/icon-network.png);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center 25px;
+    border-top: none;
+}
+
+.icon_xykcz{
+    background-image: url(./image/icon-card.png);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center 25px;
+    border-top: none;
+    border-left: none;
+}
+
+.icon_kxjs{
+    background-image: url(./image/icon-freeclassroom.png);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center 25px;
+    border-top: none;
+}
+
+.icon_hqbx{
+    background-image: url(./image/icon-repair.png);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center 25px;
+    border-top: none;
+    border-left: none;
+}
+
+.icon_jgfw{
+    background-image: url(./image/icon-jgfw.png);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center 25px;
+    border-top: none;
+}
+
+.icon_zhcg{
+    background-image: url(./image/icon-zhcg.png);
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center 25px;
+    border-top: none;
+    border-left: none;
+}
+
+p{
+    position: relative;
+    top: 30px;
+}
+
+.logo{
+    text-align: center;
+}
+
+li:hover{
+    cursor: pointer;
+    color:#6510AD;
+}
+
+.foot{
+    margin-top: 30px;
+    height: 50px;
+    font-size: 12px;
+}

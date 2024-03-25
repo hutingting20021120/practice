@@ -8,3 +8,5 @@
   <a href="https://hutingting20021120.github.io/practice/pku/pku.html">https://hutingting20021120.github.io/practice/pku/pku.html</a></li>
 <li>pycharts地图、图表、词云图绘制与词频统计（2024.3.23）<br>
   <a href="https://hutingting20021120.github.io">https://hutingting20021120.github.io</a></li>
+<li>javascript练习：和小猫剪刀石头布游戏（2024.3.25）<br>
+  <a href="https://hutingting20021120.github.io/practice/catgame/catgame.html">https://hutingting20021120.github.io/practice/catgame/catgame.html</a></li>

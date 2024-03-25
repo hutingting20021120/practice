@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>剪刀石头布游戏</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .game-option {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 24px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 2px solid;
+        transition: all 0.3s ease;
+        border-color: #c0bdbd;
+    }
+    .game-option:hover {
+        border-color: #333;
+    }
+    .introduction{
+        font-size: 20px;
+    }
+    .introduction_image{
+        text-align: center;
+        width: 200px;
+        height: 200px;
+    }
+    #result {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    #next-round-btn {
+        display: none;
+        padding: 10px 20px;
+        font-size: 20px;
+        width: 180px;
+        margin: 30px auto;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        background-color: #4CAF50;
+        color: white;
+        transition: all 0.3s ease;
+    }
+    #next-round-btn:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+    <img src="./image/catmove.gif" class="introduction_image">
+    <p class="introduction">和小猫玩剪刀石头布吧，请选择：</p>
+    <div id="options">
+        <div class="game-option" data-option="石头">石头</div>
+        <div class="game-option" data-option="布">布</div>
+        <div class="game-option" data-option="剪刀">剪刀</div>
+    </div>
+    <div id="result"></div>
+    <div id="next-round-btn">下一轮</div>
+</div>
+
+<script>
+    const options = ['石头', '布', '剪刀'];
+    const optionButtons = document.querySelectorAll('.game-option');
+    const resultDisplay = document.getElementById('result');
+    const nextRoundBtn = document.getElementById('next-round-btn');
+    const catImage = document.querySelector('.introduction_image');
+
+    let playerChoice = '';
+    let computerChoice = '';
+
+    // 电脑随机选择
+    function computerChoose() {
+        const randomIndex = Math.floor(Math.random() * options.length);
+        return options[randomIndex];
+    }
+
+    // 处理玩家选择
+    function handlePlayerChoice(option) {
+        playerChoice = option;
+        computerChoice = computerChoose();
+
+        // 更新视觉
+        optionButtons.forEach(button => button.style.pointerEvents = 'none');
+        optionButtons.forEach(button => button.style.opacity = '0.5');
+        resultDisplay.textContent = `你选择了：${playerChoice}，小猫选择了：${computerChoice}。`;
+
+        // 计算结果并显示
+        const result = calculateResult(playerChoice, computerChoice);
+        resultDisplay.textContent += ` 结果：${result}`;
+        if (result === "你输了!") {
+            catImage.src = "./image/cathappy.jpg";
+        } else if (result === "平局") {
+            catImage.src = "./image/catcalm.jpg";
+        } else {
+            catImage.src = "./image/catsad.jpg";
+        }
+
+
+        // 显示下一轮按钮
+        nextRoundBtn.style.display = 'block';
+    }
+
+    // 计算游戏结果
+    function calculateResult(player, computer) {
+        if (player === computer) {
+            return "平局";
+
+        } else if (
+            (player === '石头' && computer === '剪刀') ||
+            (player === '布' && computer === '石头') ||
+            (player === '剪刀' && computer === '布')
+        ) {
+            return "你赢了!";
+        } else {
+            return "你输了!";
+        }
+    }
+
+    // 处理下一轮按钮点击事件
+    nextRoundBtn.addEventListener('click', () => {
+        optionButtons.forEach(button => button.style.pointerEvents = 'auto');
+        optionButtons.forEach(button => button.style.opacity = '1');
+        resultDisplay.textContent = '';
+        nextRoundBtn.style.display = 'none';
+        playerChoice = '';
+        computerChoice = '';
+        catImage.src = "./image/catmove.gif";
+    });
+
+    // 给每个选项按钮添加点击事件处理程序
+    optionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            handlePlayerChoice(button.getAttribute('data-option'));
+        });
+    });
+</script>
+</body>
+</html>

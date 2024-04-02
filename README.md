@@ -10,3 +10,5 @@
   <a href="https://hutingting20021120.github.io">https://hutingting20021120.github.io</a></li>
 <li>javascript练习：和小猫剪刀石头布游戏（2024.3.25）<br>
   <a href="https://hutingting20021120.github.io/practice/catgame/catgame.html">https://hutingting20021120.github.io/practice/catgame/catgame.html</a></li>
+<li>h5表单练习：社团活动报名页面（2024.4.2）<br>
+  <a href="https://hutingting20021120.github.io/practice/form/form.html">https://hutingting20021120.github.io/practice/form/form.html</a></li>

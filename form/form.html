@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>参与者报名页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            margin: auto;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            display: block;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .color-sample {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="registrationForm" action="https://postman-echo.com/post" method="post">
+        <fieldset>
+            <legend>基本信息</legend>
+            <label for="fullName">姓名：</label>
+            <input type="text" id="fullName" name="fullName" placeholder="请输入您的姓名" required maxlength="50">
+
+            <label for="email">邮箱：</label>
+            <input type="email" id="email" name="email" placeholder="请输入您的邮箱" required>
+
+            <label for="gender">性别：</label>
+            <select id="gender" name="gender" required>
+                <option value="">请选择性别</option>
+                <option value="male">男</option>
+                <option value="female">女</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>能力信息</legend>
+            <label for="experience">经验：</label>
+            <textarea id="experience" name="experience" placeholder="请输入您的相关经验" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>活动参与信息</legend>
+            <label for="activity">活动选择：</label>
+            <select id="activity" name="activity" required>
+                <option value="">请选择活动</option>
+                <option value="female-volleyball">女子排球</option>
+                <option value="basketball">篮球</option>
+                <option value="football">足球</option>
+            </select>
+
+            <label for="timeSlot">时段选择：</label>
+            <input type="datetime-local" id="timeSlot" name="timeSlot" required><br>
+
+            <label for="clothingSize">服饰尺寸：</label>
+            <input type="text" id="clothingSize" name="clothingSize" placeholder="请输入您的服饰尺寸" required>
+
+            <label style="display: inline-flex;" for="clothingColor">服饰颜色：</label>
+            <label><input type="radio" name="color" value="red" required> <span class="color-sample"
+                    style="background-color: red;"></span>红色</label>
+            <label><input type="radio" name="color" value="yellow" required> <span class="color-sample"
+                    style="background-color: yellow;"></span>黄色</label>
+            <label><input type="radio" name="color" value="blue" required> <span class="color-sample"
+                    style="background-color: blue;"></span>蓝色</label>
+
+        </fieldset>
+
+        <button type="submit">提交报名</button>
+    </form>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function (event) {
+            var gender = document.getElementById('gender').value;
+            var activity = document.getElementById('activity').value;
+            var isValid = true;
+
+            // 表单检查
+            if (gender === 'male' && activity === 'female-volleyball') {
+                isValid = false;
+                alert('男生不能选女子排球项目！');
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // 阻止表单提交
+            }
+        });
+    </script>
+
+</body>
+
+</html>

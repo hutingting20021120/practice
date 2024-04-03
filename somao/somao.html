@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>搜猫搜索</title>
+    <style>
+        .logo {
+            text-align: center;
+        }
+
+        .logoimg {
+            width: 440px;
+            display: inline-block;
+            padding-top: 100px;
+        }
+
+        .searchbox-container {
+            margin: 0 auto;
+            width: 650px;
+            position: relative;
+        }
+
+        .searchbox {
+            width: 100%;
+            border-radius: 3px;
+            height: 42px;
+            border: solid 1px #ababab;
+            padding: 0 10px;
+            background: #fff;
+            box-sizing: border-box;
+        }
+
+        .searchbox:hover {
+            border-color: #333;
+        }
+
+        .searchbox:focus {
+            border-color: #333;
+            outline: none;
+        }
+
+        .button {
+            width: 99px;
+            height: 42px;
+            border: 0;
+            background: transparent;
+            border-radius: 0;
+            border-left: 1px solid #e6e6e6;
+            cursor: pointer;
+            outline: 0;
+            font-size: 16px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+
+
+        .enter {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 99px;
+            height: 42px;
+        }
+
+        footer {
+            color: #999;
+            font-size: 13px;
+            position: absolute;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            padding: 20px 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img class="logoimg" src="./image/logo.jpg">
+        <div class="searchbox-container">
+            <form action="https://www.sogou.com/web" method="get">
+                <input class="searchbox" type="text" name="query">
+                <span class="enter">
+                    <input class="button" type="submit" value="搜猫搜索">
+                </span>
+            </form>
+        </div>
+    </div>
+    <footer>
+        本页用h5表单模拟了搜狗搜索引擎<br>
+        将form的action改为“https://www.sogou.com/web”<br>
+        input的name改为“query”<br>
+        由此可以拼凑出搜狗搜索主页网址在增添某些字符后的url<br>
+        实现了“伪搜索引擎”的功能<br>
+        <strong>免责声明()：logo来自本人的魔改，仅供娱乐&#x1F431;<br></strong>
+    </footer>
+</body>
+
+</html>

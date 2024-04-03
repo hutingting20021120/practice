@@ -12,3 +12,7 @@
   <a href="https://hutingting20021120.github.io/practice/catgame/catgame.html">https://hutingting20021120.github.io/practice/catgame/catgame.html</a></li>
 <li>h5表单练习：社团活动报名页面（2024.4.2）<br>
   <a href="https://hutingting20021120.github.io/practice/form/form.html">https://hutingting20021120.github.io/practice/form/form.html</a></li>
+<li>h5表单及布局练习：搜猫搜索（2024.4.2）<br>
+  <a href="https://hutingting20021120.github.io/somao/somao.html">https://hutingting20021120.github.io/somao/somao.html</a></li>
+<li>人物共现图绘制及code教程网页制作（2024.4.3）<br>
+  <a href="https://hutingting20021120.github.io/normalworld/normalworld.html">https://hutingting20021120.github.io/normalworld/normalworld.html</a></li>

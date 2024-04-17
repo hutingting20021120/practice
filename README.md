@@ -14,5 +14,7 @@
   <a href="https://hutingting20021120.github.io/practice/form/form.html">https://hutingting20021120.github.io/practice/form/form.html</a></li>
 <li>h5表单及布局练习：搜猫搜索（2024.4.2）<br>
   <a href="https://hutingting20021120.github.io/somao/somao.html">https://hutingting20021120.github.io/somao/somao.html</a></li>
-<li>人物共现图绘制及code教程网页制作（2024.4.3）<br>
+<li>pycharts与html练习：《平凡的世界》人物共现图绘制及code教程网页制作（2024.4.3）<br>
   <a href="https://hutingting20021120.github.io/normalworld/normalworld.html">https://hutingting20021120.github.io/normalworld/normalworld.html</a></li>
+<li>css3练习：任天堂游戏商品陈列网页 flex布局（2024.4.17）<br>
+  <a href="https://hutingting20021120.github.io/practice/nintendo/index.html">https://hutingting20021120.github.io/practice/nintendo/index.html</a></li>

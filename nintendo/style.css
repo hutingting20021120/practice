@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #df0011;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+header img{
+    width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.product:hover img {
+    transform: translateY(-10px); /* 图片向上移动 10 像素 */
+    cursor: pointer;
+}
+
+.product:hover h2{
+    color: #df0011;
+    cursor: pointer;
+}
+
+.product:hover p{
+    cursor: pointer;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* 添加过渡效果 */
+}
+
+.product h2 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.product p {
+    margin-top: 10px;
+}
+
+.product .price-and-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.product span {
+    font-weight: bold;
+    font-size: 1.2em;
+    flex: 1;
+}
+
+.product button {
+    background-color: #df0011;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* flex: 1; */
+    margin: 0 5px;
+}
+
+.product button:hover{
+    background-color: #df0013b1;
+}
+
+footer {
+    background-color: #df0011;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+a{
+    /* text-decoration: none; */
+    color: white;
+}

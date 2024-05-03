@@ -18,3 +18,4 @@
   <a href="https://hutingting20021120.github.io/normalworld/normalworld.html">https://hutingting20021120.github.io/normalworld/normalworld.html</a></li>
 <li>css3练习：任天堂游戏商品陈列网页 flex布局（2024.4.17）<br>
   <a href="https://hutingting20021120.github.io/practice/nintendo/index.html">https://hutingting20021120.github.io/practice/nintendo/index.html</a></li>
+<li>python爬虫练习：bilibili最高评分纪录片榜单前一百（2024.5.3）crawl_bilibili文件夹<br>
